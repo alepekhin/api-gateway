@@ -2,8 +2,16 @@
 
 API gateway microservice with Spring Cloud Contract Verifier
 
-## Иницифлизация
+## Инициализация
 
 Проект построен с помощью https://start.spring.io/
+
+Spring Cloud Contract Verifier не работает в начальном проекте  
+пришлось мменять `build.gradle` на более свежую версию из  
+
+https://github.com/spring-cloud-samples/spring-cloud-contract-samples/blob/main/producer_testng/build.gradle
+
+
+
 
 

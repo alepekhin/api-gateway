@@ -51,10 +51,10 @@ dependencyManagement {
 	}
 }
 
+/*
 tasks.named('contracts') {
 	testFramework = org.springframework.cloud.contract.verifier.config.TestFramework.JUNIT5
 }
-
 tasks.named('contractTest') {
 	useJUnitPlatform()
 }
@@ -62,3 +62,19 @@ tasks.named('contractTest') {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+*/
+
+contracts {
+	testFramework = "JUNIT5"
+	packageWithBaseClasses = 'alepekhin.apigateway'
+
+}
+
+contractTest {
+	useJUnitPlatform()
+}
+
+test {
+	useJUnitPlatform()
+}
+
