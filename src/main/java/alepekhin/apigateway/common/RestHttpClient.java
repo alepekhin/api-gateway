@@ -21,16 +21,17 @@ public class RestHttpClient {
         System.out.println(response.getBody());
         return response.getBody();
     }
-    private HttpEntity createHttpEntity(String token, Object object) {
+
+    private HttpEntity<Object> createHttpEntity(String token, Object object) {
         HttpHeaders headers = new HttpHeaders();
         if (token != null) {
             headers.set("Authorization", "Bearer " + token);
         }
         headers.set(Constants.X_REQUEST_ID, MDC.get(Constants.MDC_RQID));
         if (object == null) {
-            return new HttpEntity(headers);
+            return new HttpEntity<Object>(headers);
         } else {
-            return new HttpEntity(object, headers);
+            return new HttpEntity<Object>(object, headers);
         }
     }
 

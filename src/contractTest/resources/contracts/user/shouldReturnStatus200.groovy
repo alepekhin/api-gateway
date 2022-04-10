@@ -1,4 +1,4 @@
-package contracts
+package contracts.user
 
 import org.springframework.cloud.contract.spec.Contract
 Contract.make {
@@ -10,5 +10,11 @@ Contract.make {
     }
     response {
         status 200
+
+        body([
+
+                    name: "Ervin Howell"
+
+        ])
     }
 }
