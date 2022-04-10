@@ -1,7 +1,7 @@
 package alepekhin.apigateway;
 
 
-import alepekhin.apigateway.user.UserController;
+import alepekhin.apigateway.feature.user.UserController;
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.junit.jupiter.api.BeforeEach;
 import org.springframework.beans.factory.annotation.Autowired;
