@@ -10,11 +10,6 @@ Contract.make {
     }
     response {
         status 200
-
-        body([
-
-                    name: "Ervin Howell"
-
-        ])
+        body(file("users.json"))
     }
 }
