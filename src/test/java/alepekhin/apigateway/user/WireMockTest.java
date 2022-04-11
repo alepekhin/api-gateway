@@ -3,7 +3,6 @@ package alepekhin.apigateway.user;
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.WireMock;
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,11 +38,11 @@ public class WireMockTest {
         System.out.println("inside testStub");
 
 
-        stubFor(WireMock.get(urlMatching("/users"))
+        stubFor(WireMock.get(urlMatching("/users")) // called on wiremock server localhost:7070
                 .willReturn(aResponse().withHeader("Content-TYpe", "application/json")
-                        .withStatus(200).withBodyFile("users.json")));
+                        .withStatus(200).withBodyFile("users.json"))); // file inside resources/__files
 
-        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/users"))
+        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/users")) // called on controller
                 .andExpect(status().isOk())
                 .andReturn();
 
