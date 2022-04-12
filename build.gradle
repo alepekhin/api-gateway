@@ -11,6 +11,9 @@ plugins {
 	id 'org.springframework.boot' version '2.6.6'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	// added later for /actuatpr/info
+	id "com.gorylenko.gradle-git-properties" version "2.3.2"
+	id 'jacoco'
 }
 
 apply plugin: 'spring-cloud-contract'
@@ -44,6 +47,12 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.cloud:spring-cloud-starter-contract-stub-runner'
 	testImplementation 'org.springframework.cloud:spring-cloud-starter-contract-verifier'
+	// added later
+	implementation 'org.mapstruct:mapstruct:1.4.2.Final'
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
+	// swagger
+	implementation 'org.springdoc:springdoc-openapi-ui:1.6.7'
+
 }
 
 dependencyManagement {
@@ -73,9 +82,19 @@ contracts {
 
 contractTest {
 	useJUnitPlatform()
+	finalizedBy jacocoTestReport
 }
 
 test {
 	useJUnitPlatform()
+	finalizedBy jacocoTestReport
+}
+
+jacocoTestReport {
+	executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
+}
+
+jacoco {
+	toolVersion = "0.8.7"
 }
 

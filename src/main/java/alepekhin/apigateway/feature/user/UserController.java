@@ -1,5 +1,6 @@
 package alepekhin.apigateway.feature.user;
 
+import io.micrometer.core.annotation.Timed;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +14,9 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping("/users")
-    public List<User> getUsers() {
+    @Timed("users")
+    public List<UserDTO> getUsers() {
         return userService.getUsers();
     }
+
 }
