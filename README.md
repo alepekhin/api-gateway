@@ -53,7 +53,7 @@ https://github.com/spring-cloud-samples/spring-cloud-contract-samples/blob/main/
 ### Producer test
 
 В соответствии со Spring Cloud Contract пишем спецификацию контракта
-`shouldReturnListOfUserDTO.grovy` и соответствующий метод в контролдлере.   
+`shouldReturnListOfUserDTO.grovy` и соответствующий метод в контроллере.   
 
 Contract Verifier пишет тест `UserTest.java` в папке `build/generated-test-sources`
 
