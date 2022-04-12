@@ -18,8 +18,8 @@ https://github.com/spring-cloud-samples/spring-cloud-contract-samples/blob/main/
 
 ## Архитектура
 
-Предполагаемый клиент обращается к приложению по ендпойнту `\users` и получает `List<UserDTO>`  
-Для этого прирложение обращается к бекенду, у нас это `https://jsonplaceholder.typicode.com`  
+Предполагаемый клиент обращается к приложению по ендпойнту `/users` и получает `List<UserDTO>`  
+Для этого приложение обращается к бекенду, у нас это `https://jsonplaceholder.typicode.com`,  
 по ендпойнту `/users` и получает `List<User>` которое затем преобразуется `List<UserDTO>` с помощью библиотеки `mapstruct`
 
 ## Цель проекта
@@ -30,8 +30,8 @@ https://github.com/spring-cloud-samples/spring-cloud-contract-samples/blob/main/
 - получить покрытие кода тестами и пр.
 
 На самом деле целью проекта является научиться наконец пользоваться Spring Cloud Contract  
-и написать тесты для Producer и Consumer, учитывая, что само приложение является продьюсером для своего клиента  
-и консьюмером для бекенда.
+и написать тесты для Producer и Consumer, учитывая, что само приложение является продьюсером для своего клиента
+ и консьюмером для бекенда.
 
 ## Доступные ендпойнты
 
@@ -71,6 +71,12 @@ Contract Verifier пишет тест `UserTest.java` в папке `build/gener
 Код теста `BackendContractYTest.java`
 
 После выполнения тестов покрытие можно найти в `build/reports/jacoco/test/html`
+
+## Литература
+
+- https://microservices.io/patterns/apigateway.html
+- https://spring.io/projects/spring-cloud-contract
+- https://cloud.spring.io/spring-cloud-contract/2.0.x/multi/multi__spring_cloud_contract_verifier_introduction.html
 
 
 
