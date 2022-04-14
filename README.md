@@ -7,7 +7,7 @@ API gateway microservice with Spring Cloud Contract Verifier
 Проект построен с помощью https://start.spring.io/
 
 Spring Cloud Contract Verifier не работает в начальном проекте  
-пришлось мменять `build.gradle` на более свежую версию из  
+пришлось поменять `build.gradle` на более свежую версию из  
 
 https://github.com/spring-cloud-samples/spring-cloud-contract-samples/blob/main/producer_testng/build.gradle
 
@@ -77,7 +77,7 @@ Contract Verifier пишет тест `UserTest.java` в папке `build/gener
 - https://microservices.io/patterns/apigateway.html
 - https://spring.io/projects/spring-cloud-contract
 - https://cloud.spring.io/spring-cloud-contract/2.0.x/multi/multi__spring_cloud_contract_verifier_introduction.html
-
+- https://nickolasfisher.com/blog/How-to-Make-Concurrent-Service-API-Calls-in-Java-Using-Spring-Boot
 
 
 
