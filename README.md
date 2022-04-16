@@ -68,7 +68,7 @@ Contract Verifier пишет тест `UserTest.java` в папке `build/gener
 Тест для консьюмера пишется руками используя этот стаб - также как наш клиент 
 должен написать тест используя нами сгенерированный стаб.
 
-Код теста `BackendContractYTest.java`
+Код теста `BackendContractTest.java`
 
 После выполнения тестов покрытие можно найти в `build/reports/jacoco/test/html`
 

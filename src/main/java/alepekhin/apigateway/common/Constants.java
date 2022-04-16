@@ -14,7 +14,7 @@ public final class Constants {
     /**
      * MDC variable name for saving request id
      */
-    public static final String MDC_RQID = "mdc.rqid";
+    public static final String MDC_RQID = "request_id";
 
     /**
      * Header name for request id sent to backend
